@@ -1,0 +1,111 @@
+/*** box sizing border-box for all elements ***/
+
+#product-overview{
+    background: linear-gradient(to top, rgba(80,68,18,0.6)10%, transparent),
+    url("images/freedom.png") left 10% bottom 20%/cover no-repeat border-box;
+    /* background-image: url("images/freedom.png");
+    background-size: cover; */
+    width:100%;
+    height: 628px;
+}
+.plans{
+    width:100%;
+}
+
+.project-mainHeading{
+    text-align: center;
+    color:white;
+    padding: 70px 0 5px 0;
+    margin: auto;
+    margin-bottom:10px;
+    width: 50%;
+}
+.project-heading{
+    background-color: rgb(196, 138, 32);
+    color: white;
+    padding: 10px 0 5px 0;
+    text-align:center;
+    width:100%;
+}
+.plan__features li{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+.plan__price{
+    color: white;
+}
+
+
+.pagePlan{
+    background: rgb(116, 187, 157);
+    display:inline-block;
+    padding: 16px;
+    margin:8px;
+    margin-top:35px;
+    margin-left:20px;
+    text-align: center;
+    width:30%;
+    border-radius: 8px;
+    vertical-align:middle;
+    height:250px;
+}
+.plan--highlighted{
+    background-color: rgb(51, 153, 110);
+    color:white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    height:300px;
+
+}
+.planPage__topHead{
+    font-weight:bold;
+    font-size: 1.5rem;
+    color:rgb(51, 153, 110);
+    background: white;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding-top: 7px;
+    margin-bottom:7px;
+
+}
+.planStyle{
+    background: linen;
+    height:500px;
+    width:100%;
+    margin-bottom:-100px;
+}
+
+#key-features{
+    background: rgb(218, 101, 101);
+    text-align:center;
+    
+}
+.features{
+    display:inline-block;
+    padding: 16px;
+    margin:38px;
+    list-style: none;
+    background: lightpink;
+    height:250px;
+    border-radius: 8px;
+    vertical-align:middle;
+    text-align: center;
+    font-size:1.1rem;
+}
+.feature-2{
+   width:200px;
+}
+.key-features__image{
+    background: rgb(218, 101, 101);
+    width:128px;
+    height:128px;
+    border:1px gray solid;
+    border-radius:50%;
+    margin:auto;
+    padding:20px;
+}
+/* using peusdo elements */
+p::first-letter{
+    font-size: 20px;
+    color:red;
+}

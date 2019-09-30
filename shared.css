@@ -1,0 +1,138 @@
+/* styles from style.css to shared file */
+/* header and nav */
+*,
+*::before,
+*::after{box-sizing:border-box;
+}
+*{
+   margin: 0;  
+   padding: 0;  
+}
+
+
+body{
+    font-family: 'Gayathri', sans-serif;
+   
+}
+/* to add a popup */
+.backdrop{
+    display: none;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 100;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.5);
+
+}
+.main-header{
+    /* vertical-align: middle; */
+    background: rgb(235, 234, 234);
+    padding-top: 15px;
+    padding-bottom:7px;
+    position: fixed;
+    width:100%;
+    top:0;
+    z-index:1;
+}
+
+/* using combinator */
+.main-header > div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.main-header__brand{
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-left:20px;
+    height:22px;
+    display: inline-block; 
+}
+/* set height on header to contain image and inline-block then height on header to contain the image */
+.main-header__brand img{
+    height:100%;
+}
+.main-nav{
+    display: inline-block;
+    text-align:right;
+    /* attempt to push element to the right calculating width - the current element width */
+    width: calc(100% - 84px);
+    vertical-align: middle;
+}
+    
+.main-nav__item{
+    display:inline-block;
+}
+.main-nav__items{
+    margin:0;
+    padding:0 15px;
+    list-style: none;
+}
+.main-nav__items li a {
+    text-decoration: none;
+    color:green;
+    padding-left:16px;
+}
+.main-nav__item a:hover{
+    font-weight:bold;
+}
+.main-nav__item a:active{
+    color: red;
+}
+
+/* color not changing to white???? used important to change/ now works */
+.main-nav__item--cta a{
+    background: red; 
+    padding: 5px 16px 0 20px;
+    border-radius: 8px;
+    color:white !important;
+}
+.main-nav__item--cta{
+    margin-left:15px;
+}
+
+/* buttons */
+.button{
+    background: gray;
+    padding: 7px;
+    border-radius:7px;
+    border:none;
+    color:white;
+}
+.button:hover{
+    background: lightgray;
+    color:black;
+    cursor:pointer;
+
+}
+/* footer */
+.separation-bar{
+    height:40px;
+    width:100%;
+    background-color: rgb(196, 138, 32);
+}
+.main-footer{
+    background:darkgreen;
+    padding: 25px;
+    width:100%;
+    text-align:center;
+    position:sticky;
+    bottom:0;
+
+}
+.main-footer__items{
+    list-style: none;
+    display:inline-block;
+    margin:0 16px;
+}
+.main-footer__items a{
+    text-decoration: none;
+    color: white;   
+}
+.main-footer__items a:hover,
+.main-footer__items a:active{
+    font-size:1.7rem;
+}
