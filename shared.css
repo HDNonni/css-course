@@ -14,6 +14,9 @@ body{
     font-family: 'Gayathri', sans-serif;
    
 }
+main{
+    min-height:calc(100vh - 3.5rem - 8rem);
+}
 /* to add a popup */
 .backdrop{
     display: none;
@@ -21,20 +24,22 @@ body{
     top:0;
     left:0;
     z-index: 100;
-    width:100vw;
-    height:100vh;
+    width:100%;
+    height:100%;
     background:rgba(0,0,0,0.5);
 
 }
 .main-header{
     /* vertical-align: middle; */
     background: rgb(235, 234, 234);
-    padding-top: 15px;
-    padding-bottom:7px;
+    /* padding-top: 15px;
+    padding-bottom:7px; */
+    padding: 0.5rem 1rem;
     position: fixed;
     width:100%;
     top:0;
     z-index:1;
+    left:0;
 }
 
 /* using combinator */
@@ -42,58 +47,122 @@ body{
     display: inline-block;
     vertical-align: middle;
 }
+/* create mobile button */
+.toggle-button{
+    width: 3rem;
+    background: transparent;
+    border:none;
+    cursor:pointer;
+    padding-top:0;
+    padding-bottom:0;
+    vertical-align: middle;
+    
+}
+.toggle-button:focus{
+    outline: none;
+}
+.toggle-button__bar{
+    width:100%;
+    height:0.2rem;
+    background: black;
+    display:block;
+    margin:0.6rem 0;
+}
 .main-header__brand{
     text-decoration: none;
     color: green;
     font-weight: bold;
-    font-size: 1.5rem;
-    padding-left:20px;
-    height:22px;
+    /* font-size: 1.5rem; */
+    /* padding-left:20px; */
+    height:2.5rem;
     display: inline-block; 
+    vertical-align: middle;
 }
 /* set height on header to contain image and inline-block then height on header to contain the image */
 .main-header__brand img{
     height:100%;
+    padding-left:15px;
 }
 .main-nav{
     display: inline-block;
     text-align:right;
     /* attempt to push element to the right calculating width - the current element width */
-    width: calc(100% - 84px);
+    width: calc(100% - 122px);
     vertical-align: middle;
 }
     
 .main-nav__item{
     display:inline-block;
+    margin:0 1rem;
 }
 .main-nav__items{
     margin:0;
-    padding:0 15px;
+    padding:0 ;
     list-style: none;
 }
-.main-nav__items li a {
+/* commented out to compare */
+/* .main-nav__items li a, 
+.mobile-nav__item a{
     text-decoration: none;
     color:green;
-    padding-left:16px;
+    padding-left:16px; */
+/* } */
+.main-nav__item a,
+.mobile-nav__item a {
+  text-decoration: none;
+  color: green;
+  /* font-weight: bold; */
+  padding: 0.2rem 0;
 }
-.main-nav__item a:hover{
+.main-nav__item a:hover,
+.mobile-nav__item a:hover{
     font-weight:bold;
 }
-.main-nav__item a:active{
+.main-nav__item a:active,
+.mobile-nav__item a:active{
     color: red;
 }
 
 /* color not changing to white???? used important to change/ now works */
-.main-nav__item--cta a{
+.main-nav__item--cta a,
+.mobile-nav__item--cta a{
     background: red; 
     padding: 5px 16px 0 20px;
     border-radius: 8px;
     color:white !important;
 }
-.main-nav__item--cta{
+.main-nav__item--cta,
+.mobile-nav__item--cta{
     margin-left:15px;
 }
-
+/* //mobile sidebar */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 80%;
+    height: 100vh;
+  }
+  
+  .mobile-nav__items {
+    width: 90%;
+    height: 100%;
+    list-style: none;
+    margin: 10% auto;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .mobile-nav__item {
+    margin: 1rem 0;
+  }
+  
+  .mobile-nav__item a {
+    font-size: 1.5rem;
+  }
 /* buttons */
 .button{
     background: gray;
@@ -121,7 +190,6 @@ body{
     text-align:center;
     position:sticky;
     bottom:0;
-
 }
 .main-footer__items{
     list-style: none;
@@ -136,3 +204,15 @@ body{
 .main-footer__items a:active{
     font-size:1.7rem;
 }
+.open{
+    display:block !important;
+}
+/* @media (min-width: 60rem) {
+   
+  } */
+  @media (min-width:40rem){
+      .toggle-button{
+          display: none;
+      }
+    
+  }

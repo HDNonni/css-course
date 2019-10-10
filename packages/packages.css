@@ -1,86 +1,97 @@
-main{
-    margin-top: 5rem;
+/* fix footer ? what the problem is */
+main {
+  margin-top: 3.5rem;
 }
-.background{
-    background: url("../images/plans-background.png") center/cover;
-    filter:grayscale(50%);
-    position: fixed;
-    width:100vw;
-    height:100vh;
-    z-index: -1;
-    margin-top:-30px;
-    
+.background {
+  background: url("../images/plans-background.png") center/cover;
+  filter: grayscale(50%);
+  /* position: fixed; */
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  /* margin-top:-10px; */
+}
+.clearfix {
+  clear: both;
 }
 
-.clearfix{
-    clear:both
-}
 .all_plans {
-    width:64%;
-    margin:1.4rem 0 0.8rem 0;
-    height: 200px;
-    border: 2px solid darkgreen;
-    padding-top:25px;
-    position: relative;
+  width: 64%;
+  margin: 1.4rem 0 0.8rem 0;
+  
+  height: 200px;
+  border: 2px solid darkgreen;
+  /* padding-top: 25px; */
+  position: relative;
 }
-#plus_plan{
-    background: rgba(206, 236, 206,0.9);
+#plus_plan {
+  background: rgba(206, 236, 206, 0.9);
+ 
 }
-#plus_plan h1{
-    color:black;
-}     
-.plan_badge{
-    position: absolute;
-    top: 0;
-    right:0;
-    left: 400;
-    margin:20px;
-    font-size:0.8rem;
-    padding:8px 5px 5px 5px;
-    color:white;
-    background: red;
-    border-radius: 5px;
-    z-index:10;
+#plus_plan h1 {
+  color: black;
+}
+.plan_badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 400;
+  margin: 20px;
+  font-size: 0.8rem;
+  padding: 8px 5px 5px 5px;
+  color: white;
+  background: red;
+  border-radius: 5px;
+  /* commented out z-index ? if needed */
+  /* z-index: 10; */
+}
+#free_plan {
+  background: rgba(211, 255, 207, 0.9);
+  float: right;
+}
+#free_plan h1 {
+  color: black;
+}
+#prem_plan {
+  background: rgba(14, 82, 14, 0.9);
+}
+#prem_plan a {
+  color: white;
+}
+#prem_plan p {
+  color: black;
+}
 
+.all_plans:hover,
+.all_plans:active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border-color: brown;
 }
-#free_plan{
-    background: rgba(211, 255, 207,0.9); 
-    float:right;   
+.all_plans a {
+  text-decoration: none;
+  display: block;
+  padding: 2rem;
 }
-#free_plan h1{
-    color:black;
+.plan_heading {
+  padding-bottom: 0.8rem;
+  padding-left: 1.2rem;
 }
-#prem_plan{
-    background: rgba(14, 82, 14,0.9);
+.type_plan {
+  color: gray;
+  padding-left: 1.2rem;
 }
-#prem_plan a{
-    color:white;
+.descrip {
+  background: white;
+  border: 1px solid black;
+  /* width: 90%; */
+  padding: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
-#prem_plan p{
-    color:black;
-}
-
-.all_plans:hover, .all_plans:active{
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    border-color: brown;
-}
-.all_plans a{
-    text-decoration: none; 
-    
-}
-.plan_heading{
-    padding-bottom:0.8rem;
-    padding-left:1.2rem;
-}
-.type_plan{
-    color: gray;
-    padding-left:1.2rem;
-}
-.descrip{
-    background:white;
-    border:1px solid black;
-    width:90%;
-    padding:10px;
-    margin-left:20px;
-    margin-top:20px;
-}
+/* @media (min-width: 40rem) {
+  main {
+    margin: 3rem 0; */
+    /* max-width added to pull to the center on larger screens although needs work */
+    /* max-width: 1500px;
+  }
+} */
