@@ -1,0 +1,75 @@
+main {
+  padding-top: 2rem;
+  margin-top: 3.5rem;
+}
+
+.signup-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ff5454;
+}
+.signup-form {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.signup-form label,
+.signup-form input,
+.signup-form select {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+}
+/* .signup-form input[type=checkbox], */
+/* using advanced css selectors */
+.signup-form input[id*="terms"],
+/* below targets all labels that directly follow */
+.signup-form input[id*="terms"] + label {
+  display: inline-block;
+  width: auto;
+  /* align checkbox ; doesn't work*/
+  /* vertical-align: middle; */
+}
+/* target all inputs except what in the 'not' parens */
+.signup-form input:not([type="checkbox"]),
+.signup-form select {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  /* to get font fron rest of page */
+  font: inherit;
+}
+/* to eliminate to browser style and add custom ones to inputs */
+.signup-form input:focus,
+.signup-form select:focus {
+  outline: none;
+  background: rgb(202, 236, 205);
+  border-color: #2ddf5c;
+}
+
+.signup-form input[type="checkbox"] {
+  border: 2px solid lightgray;
+  background: white;
+  width: 1rem;
+  height: 1rem;
+  /* disable default */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.signup-form input[type="checkbox"]:checked {
+    background: #2ddf5c;
+    /* border:#0e4f1f; */
+    border:2px solid black;
+}
+.signup-form button[type="submit"] {
+    /* removing display block improved the look , not sure what else it will effect */
+  /* display: block; */
+  margin-top: 1.8rem;
+}
+@media (min-width: 40rem) {
+  .signup-form {
+    margin: auto;
+    width: 25rem;
+  }
+}
