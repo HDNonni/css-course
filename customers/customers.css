@@ -72,7 +72,7 @@
     width: 30%;
   }
   .testimonial__image-container {
-    display: inline-block;
+    /* display: inline-block; */
     width: 65%;
     /* add max width to control the size of mage with diff screen sizes */
     max-width: 580px;
@@ -82,5 +82,8 @@
     margin: 3rem 0;
     /* max-width added to pull to the center on larger screens although needs work */
     max-width:1500px;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
   }
 }
